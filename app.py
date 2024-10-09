@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 # load data
-heart = pd.read_csv(r'C:\Users\41536\Documents\greenbootcamps\Project_HeartDisease\clean_data.csv')
+heart = pd.read_csv(r'clean_data.csv')
 heart.head()
 
 heart = heart.drop(columns=['num'])
