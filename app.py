@@ -80,17 +80,17 @@ if st.button('Predict'):
     # Assuming the output is binary (0 = no heart disease, 1 = heart disease)
     if prediction[0] == 1:
         predicted_class = (
-            "For Clients: Oops! Please take care of your heart! "
+            "For Clients: Oops! Please take care of your heart! \n"
             "As your insurance provider, we advise you to consult a healthcare professional for a thorough check-up."
         )
     else:
         predicted_class = (
-            "For Clients: Great news! Your heart health looks good! "
+            "For Clients: Great news! Your heart health looks good! \n"
             "As your insurance provider, we encourage you to continue your healthy habits and stay proactive about your wellness."
         )
     
-    # Display the results
-    st.write(f"Predicted Class: {predicted_class}")
+    # Display the results without 'Predicted Class'
+    st.markdown(predicted_class)
 
 # Footer
 st.write("This app uses a retrained RandomForestClassifier to predict the presence of heart disease.")
