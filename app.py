@@ -74,13 +74,15 @@ st.markdown(
         color: #333333;  /* Header colors */
     }
     .stLabel {
-        color: #333333;  /* Color for input labels */
-        font-size: 16px;  /* Font size for input labels */
+        color: #000000;  /* Change label color to black */
+        font-size: 18px;  /* Increase font size for input labels */
+        font-weight: bold;  /* Make labels bold */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Input fields for user features
 age = st.slider('Age', 0, 120, 50)
