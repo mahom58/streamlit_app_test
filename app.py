@@ -21,7 +21,7 @@ best_rf_model = RandomForestClassifier(n_estimators = 200, min_samples_split = 5
 best_rf_model.fit(X_train, y_train)
 
 import streamlit as st
-
+'''
 # Set custom styles
 st.markdown(
     """
@@ -42,7 +42,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+'''
 
 # App title and subtitle
 st.markdown("<h1 style='text-align: center;'>CardioCompass</h1>", unsafe_allow_html=True)
