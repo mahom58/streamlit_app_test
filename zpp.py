@@ -20,20 +20,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 best_rf_model = RandomForestClassifier(n_estimators = 200, min_samples_split = 5, min_samples_leaf = 4, max_depth = 20)
 best_rf_model.fit(X_train, y_train)
 
-import streamlit as st
-
-# Centering the title
-# Centered title in black
-st.markdown("<h1 style='text-align: center; color: black;'>CardioCompass</h1>", unsafe_allow_html=True)
-
-# Centered subtitle in a different color
-st.markdown("<h2 style='text-align: center; color: #FF6347;'>- Navigate Your Heart -</h2>", unsafe_allow_html=True)
-
-
+# Streamlit app title
+st.title("Heart Disease Prediction App")
 
 # Instructions for the user
 st.write("""
-    Fill in your details below to check your heart health using our smart prediction tool!
+    Enter the feature values to predict the presence of heart disease using the Random Forest model.
 """)
 
 
@@ -45,44 +37,6 @@ restecg_options = {0: 'Normal', 1: 'Abnormal ST-T', 2: 'Left Ventricular Hypertr
 exang_options = {0: 'No', 1: 'Yes'}
 slope_options = {0: 'Upsloping', 1: 'Flat', 2: 'Downsloping'}
 thal_options = {0: 'Normal', 1: 'Fixed Defect', 2: 'Reversible Defect', 3: 'Unknown'}
-
-import streamlit as st
-
-# Custom CSS for the slider
-st.markdown(
-    """
-    <style>
-    .stSlider > div {
-        background-color: #FFFFFF;  /* Background color of the slider */
-    }
-    .stSlider input[type="range"] {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 15px;
-        background: #ddd;  /* Slider track color */
-        border-radius: 5px;
-    }
-    .stSlider input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #FF6347;  /* Thumb color */
-        cursor: pointer;
-    }
-    .stSlider input[type="range"]::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #FF6347;  /* Thumb color */
-        cursor: pointer;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # Input fields for user features
 age = st.slider('Age', 0, 120, 50)
@@ -140,4 +94,4 @@ if st.button('Predict'):
         st.markdown(predicted_class)
 
 # Footer
-st.write("This app uses a trained RandomForestClassifier to predict the presence of heart disease.")
+st.write("This app uses a retrained RandomForestClassifier to predict the presence of heart disease.")
