@@ -33,10 +33,16 @@ st.markdown(
     h1, h2, h3, h4, h5, h6 {
         color: #333333;  /* Header colors */
     }
+    .stLabel {
+        color: #000000;  /* Change label color to black */
+        font-size: 18px;  /* Increase font size for input labels */
+        font-weight: bold;  /* Make labels bold */
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # App title and subtitle
 st.markdown("<h1 style='text-align: center;'>CardioCompass</h1>", unsafe_allow_html=True)
@@ -62,26 +68,6 @@ thal_options = {0: 'Normal', 1: 'Fixed Defect', 2: 'Reversible Defect', 3: 'Unkn
 import streamlit as st
 
 
-# Set custom styles
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #ffffff;  /* Light background */
-        color: #000000;  /* Text color */
-    }
-    h1, h2, h3, h4, h5, h6 {
-        color: #333333;  /* Header colors */
-    }
-    .stLabel {
-        color: #000000;  /* Change label color to black */
-        font-size: 18px;  /* Increase font size for input labels */
-        font-weight: bold;  /* Make labels bold */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 # Input fields for user features
