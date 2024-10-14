@@ -22,12 +22,25 @@ best_rf_model.fit(X_train, y_train)
 
 import streamlit as st
 
-# Centering the title
-# Centered title in black
-st.markdown("<h1 style='text-align: center; color: black;'>CardioCompass</h1>", unsafe_allow_html=True)
+# Set custom styles
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #ffffff;  /* Light background */
+        color: #000000;  /* Text color */
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #333333;  /* Header colors */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# Centered subtitle in a different color
-st.markdown("<h2 style='text-align: center; color: #FF6347;'>- Navigate Your Heart -</h2>", unsafe_allow_html=True)
+# App title and subtitle
+st.markdown("<h1 style='text-align: center;'>CardioCompass</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #FF6347; font-size: 20px;'>- Navigate Your Heart -</h2>", unsafe_allow_html=True)
 
 
 
